@@ -1,7 +1,7 @@
 ﻿namespace ToDo_Program
 {
     ///<summary>
-    /// Clase principal Todo para 
+    /// Clase principal Todo para el programa
     ///</summary>
     public class ToDo
     {
@@ -94,7 +94,11 @@
             int index = 0;
 
             // Mostrando los deberes existentes
-            if (toDoList.Count > 1)
+            if (toDoList.Count == 0)
+            {
+                Console.WriteLine("\n--- No hay elementos actualmente para listar ---\n");
+            }
+            else
             {
                 Console.WriteLine("\n----- Lista de deberes -----");
                 foreach (var item in toDoList)
@@ -103,10 +107,6 @@
                     index++;
                 }
                 Console.WriteLine("----------------------------\n");
-            }
-            else
-            {
-                Console.WriteLine("\n--- No hay elementos actualmente para listar ---\n");
             }
         }
 
